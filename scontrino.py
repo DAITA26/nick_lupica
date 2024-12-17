@@ -10,6 +10,7 @@ qty = input("Quante ne compri? ")
 tot = round(int(qty) * float(price))
 print(F"Per comprare {qty} di {item} devi pagare {tot}€. Grazie e arrivederci")
 
+# metodo_2 - calcolare il risultato e mettere la formula nella f strings
 print(F"Per comprare {qty} di {item} devi pagare {round(int(qty) * float(price), 2)}€. Grazie e arrivederci")
 
 
