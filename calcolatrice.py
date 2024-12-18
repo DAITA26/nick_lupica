@@ -8,13 +8,18 @@
 print("Programma che crea una calcolatrice")
 
 # Richiesta all'utente del tipo di operazione che vuole fare
-operazione = input("Che tipo di operazione vuoi fare? ")
+operazione = input("""Che tipo di operazione vuoi fare?
+ + = somma
+ - = sottrazione
+ x = moltiplicazione
+ / = divisione
+ """).strip().lower()
 
 # Richiesta di inserimento dei numeri
-x = float(input("Inserisci primo numero: "))
-y = float(input("Inserisci secondo numero: "))
+x = float(input("Inserisci il primo numero: "))
+y = float(input("Inserisci il secondo numero: "))
 
-# Controllo dell'operazione scelta
+# Controllo dell'operazione scelta e stampa
 if operazione == "somma" or operazione == "+":
     print(f"Risultato della somma: {x + y}")
 elif operazione == "sottrazione" or operazione == "-":
@@ -28,3 +33,4 @@ elif operazione == "divisione" or operazione == "/":
         print(f"Risultato della divisione: {x / y}")
 else:
     print("Operazione non valida. Scegli tra somma, sottrazione, moltiplicazione, divisione.")
+
