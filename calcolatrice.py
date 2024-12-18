@@ -21,16 +21,27 @@ y = float(input("Inserisci il secondo numero: "))
 
 # Controllo dell'operazione scelta e stampa
 if operazione == "somma" or operazione == "+":
-    print(f"Risultato della somma: {x + y}")
+    risultato = x + y
 elif operazione == "sottrazione" or operazione == "-":
-    print(f"Risultato della sottrazione: {x - y}")
+    risultato = x - y
 elif operazione == "moltiplicazione" or operazione == "x":
-    print(f"Risultato della moltiplicazione: {x * y}")
+    risultato = x * y
 elif operazione == "divisione" or operazione == "/":
     if y == 0:
         print("Errore: divisione per zero non consentita.")
     else:
-        print(f"Risultato della divisione: {x / y}")
+        risultato = x / y
 else:
     print("Operazione non valida. Scegli tra somma, sottrazione, moltiplicazione, divisione.")
+
+print(f"Il risultato della tua {operazione} è {risultato}")
+
+
+
+
+
+
+
+
+
 
