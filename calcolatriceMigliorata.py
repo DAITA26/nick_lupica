@@ -4,7 +4,7 @@
 print("""Ciao, sono una calcolatrice. 
 Segui tutti i passaggi per riuscire a ottenere il risultato desiderato.""")
 
-operatore = input("""\nScegli un'operatore da svolgere.
+operatore = input("""\nScegli un'operazione da svolgere.
 1 + somma
 2 - sottrazione
 3 x * moltiplicazione
