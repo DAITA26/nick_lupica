@@ -11,20 +11,20 @@ print("Programma che crea una calcolatrice")
 operazione = input("Che tipo di operazione vuoi fare? ")
 
 # Richiesta di inserimento dei numeri
-numero_1 = float(input("Inserisci primo numero: "))
-numero_2 = float(input("Inserisci secondo numero: "))
+x = float(input("Inserisci primo numero: "))
+y = float(input("Inserisci secondo numero: "))
 
 # Controllo dell'operazione scelta
 if operazione == "somma" or operazione == "+":
-    print(f"Risultato della somma: {numero_1 + numero_2}")
+    print(f"Risultato della somma: {x + y}")
 elif operazione == "sottrazione" or operazione == "-":
-    print(f"Risultato della sottrazione: {numero_1 - numero_2}")
+    print(f"Risultato della sottrazione: {x - y}")
 elif operazione == "moltiplicazione" or operazione == "x":
-    print(f"Risultato della moltiplicazione: {numero_1 * numero_2}")
+    print(f"Risultato della moltiplicazione: {x * y}")
 elif operazione == "divisione" or operazione == "/":
-    if numero_2 == 0:
+    if y == 0:
         print("Errore: divisione per zero non consentita.")
     else:
-        print(f"Risultato della divisione: {numero_1 / numero_2}")
+        print(f"Risultato della divisione: {x / y}")
 else:
     print("Operazione non valida. Scegli tra somma, sottrazione, moltiplicazione, divisione.")
