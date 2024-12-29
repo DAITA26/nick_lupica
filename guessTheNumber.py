@@ -10,7 +10,7 @@ while tentativiRimasti > 0:
     print(f"Hai ancora {tentativiRimasti} tentativi")
     scommessa = input("Quale numero scegli? ").strip()
     if not scommessa.isdigit():
-        print("Puoi inserire solo numeri")
+        print("Puoi inserire solo numeri interi")
         tentativiRimasti -= 1
         continue
     scommessa = int(scommessa)
@@ -21,10 +21,12 @@ while tentativiRimasti > 0:
         break
     else:
         print("Che peccato! Hai sbagliato")
-        if scommessa > numero_segreto:
+        if scommessa > numero_segreto and tentativiRimasti !=0:
             print("Prova con un numero più BASSO...")
-        else:
+        elif scommessa < numero_segreto and tentativiRimasti !=0:
             print("Prova con un numero più ALTO...")
+        else:
+            print("Era l'ultimo tentativo, game over")
 
 else:
     print(f"Il numero da indovinare era {numero_segreto}")
