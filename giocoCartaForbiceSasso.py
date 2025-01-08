@@ -32,12 +32,12 @@ while contatore <= 5:
         pnt_usr += 1
 
     elif mossa == "carta" and scelta_computer == 3 or mossa == "sasso" and scelta_computer == 1 or mossa == "forbice" and scelta_computer == 2:
-        print("Mi spiace, hai perso!")
+        print("Mi spiace, hai perso il round!")
         print("")
         pnt_cpu += 1
 
     elif  mossa == "carta" and scelta_computer == 1 or mossa == "sasso" and scelta_computer == 2 or mossa == "forbice" and scelta_computer == 3:
-        print(f"Hai pareggiato! Entrambi avete scelto {mossa}.")
+        print(f"Hai pareggiato il round! Entrambi avete scelto {mossa}. Nessun punto assegnato")
         print("")
     else:
         print("Non hai inserito una mossa valida! Riprova.")
@@ -45,12 +45,12 @@ while contatore <= 5:
 
 
 else:
-    print("I round sono finiti. Scopriamo se hai vinto")
+    print("I round sono finiti. Scopriamo se hai vinto..")
     print(f"punt cpu = {pnt_cpu}")
     print(f"punt usr = {pnt_usr}")
     if pnt_cpu > pnt_usr:
-        print("Hai Persooo")
+        print("Hai Perso la partita.")
     elif pnt_cpu == pnt_usr:
         print("Pareggio, rigiochiamo?")
     else:
-        print("Mi hai battuto!!!")
+        print("Complimenti! Hai vinto la partita!")
