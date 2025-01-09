@@ -31,3 +31,4 @@ while tentativiRimasti > 0:
 else:
     print(f"Il numero da indovinare era {numero_segreto}")
 
+
