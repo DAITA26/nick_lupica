@@ -16,3 +16,4 @@ for primo in range (2, 10):
         print(f"{primo} x {secondo} = {primo * secondo}")
     else:
         print("------")
+
