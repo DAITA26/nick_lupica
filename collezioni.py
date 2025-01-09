@@ -56,3 +56,4 @@ print(persona)
 persona.pop("città")
 print(persona)
 
+
