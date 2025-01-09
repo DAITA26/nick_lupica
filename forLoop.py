@@ -58,6 +58,3 @@ for n in range(11):
     print(n)
 else:
     print("il ciclo for è finito")
-
-
-    
