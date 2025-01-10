@@ -37,6 +37,7 @@ print(A.union(B))
 print(A.intersection(B))
 print(A.difference(B))
 print("")
+
 #I Dizionari
 print("I Dizionari")
 persona = {"nome" : "Alice",
