@@ -65,7 +65,7 @@ def fai_domanda(indice_domanda):
         print(f"Sbagliato! La risposta corretta era: {y[risposta_pc]}")
 
 def gioca():
-    global punteggio
+
     for i in range(len(domande)):
         fai_domanda(i)
     print(f"Le risposte corrette erano {risposte_pc}")
