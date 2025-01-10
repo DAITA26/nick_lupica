@@ -18,5 +18,3 @@ item_1 = input("Che cosa vuoi comprare? ")
 price_1 = float(input("Quanto costa? "))
 qty_1 = int(input("Quante ne compri? "))
 print(F"Per comprare {qty_1} di {item_1} devi pagare {round(qty_1 * price_1, 2)}€. Grazie e arrivederci")
-
-
