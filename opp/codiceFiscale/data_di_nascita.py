@@ -9,7 +9,7 @@ class DataDiNascita:
 
 # La generazione del numero a 2 cifre che identifica l'anno di nascita
     def gestisci_anno(self):
-        return self.anno[-2:] if len(self.anno) == 4 else "Immetti un anno valido"
+        return self.anno[-2:]
 
 # La conversione del mese di nascita in lettera dell'alfabeto
     def gestisci_mese(self):
@@ -49,35 +49,35 @@ class DataDiNascita:
         return self.gestisci_anno() + self.gestisci_mese() + self.gestisci_giorno_sesso(sesso)
 
 
-if __name__ == '__main__':
-    """
-    anno_nascita = int(input("Digita il tuo anno di nascita ").strip().isdigit())
-    mese_nascita = input("Digita il tuo mese di nascita ").strip()
-    giorno_nascita = int(input("Digita il giorno della tua nascita ").strip().isdigit())
-    
-    obj = DataDiNascita(anno_nascita, mese_nascita, giorno_nascita)
-    print(obj.stampa_codice("F"))  # Output: 63T44
-    print(obj.stampa_codice("M"))  # Output: 63T04
-    """
 
-    obj1 = DataDiNascita(1999, "marzo", "04")
-    obj2 = DataDiNascita(9, "03", 4)
-    obj3 = DataDiNascita(199, 3, "09")
-    obj4 = DataDiNascita("1999", 3, 9)
+"""
+anno_nascita = int(input("Digita il tuo anno di nascita ").strip().isdigit())
+mese_nascita = input("Digita il tuo mese di nascita ").strip()
+giorno_nascita = int(input("Digita il giorno della tua nascita ").strip().isdigit())
 
-    print(obj1.stampa_codice("M"))
-    print(obj2.stampa_codice("m"))
-    print(obj3.stampa_codice("F"))
-    print(obj4.stampa_codice("f"))
-    print("")
+obj = DataDiNascita(anno_nascita, mese_nascita, giorno_nascita)
+print(obj.stampa_codice("F"))  # Output: 63T44
+print(obj.stampa_codice("M"))  # Output: 63T04
+"""
 
-    print(obj1.gestisci_giorno_sesso("M"))
-    print(obj2.gestisci_giorno_sesso("m"))
-    print(obj3.gestisci_giorno_sesso("F"))
-    print(obj4.gestisci_giorno_sesso("f"))
-    print("")
+obj1 = DataDiNascita(1999, "marzo", "04")
+obj2 = DataDiNascita(1999, "03", 4)
+obj3 = DataDiNascita(1999, 3, "09")
+obj4 = DataDiNascita("1999", 3, 9)
 
-    print(obj1.gestisci_mese())
-    print(obj2.gestisci_mese())
-    print(obj3.gestisci_mese())
-    print(obj4.gestisci_mese())
+print(obj1.stampa_codice("M"))
+print(obj2.stampa_codice("m"))
+print(obj3.stampa_codice("F"))
+print(obj4.stampa_codice("f"))
+print("")
+
+print(obj1.gestisci_giorno_sesso("M"))
+print(obj2.gestisci_giorno_sesso("m"))
+print(obj3.gestisci_giorno_sesso("F"))
+print(obj4.gestisci_giorno_sesso("f"))
+print("")
+
+print(obj1.gestisci_mese())
+print(obj2.gestisci_mese())
+print(obj3.gestisci_mese())
+print(obj4.gestisci_mese())
