@@ -51,12 +51,11 @@ class StringaDiTesto:
     def genera_codice(self):
         return self.gestisci_cognome(self.cognome) + self.gestisci_nome(self.nome)
 
-"""
 
-nome = input("Digita il tuo nome ").strip()
-cognome = input("Digita il tuo cognome ").strip()
+if __name__ == '__main__':
+    nome = input("Digita il tuo nome ").strip()
+    cognome = input("Digita il tuo cognome ").strip()
 
-obj = StringaDiTesto(nome, cognome)
+    obj = StringaDiTesto(nome, cognome)
 
-print(obj.genera_codice())
-"""
+    print(obj.genera_codice())
