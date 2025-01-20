@@ -73,5 +73,4 @@ def gioca():
     print(f"La percentuale di vittorie è stata del {punteggio / (len(domande)) * 100}%")
 
 # Avvia il quiz
-gioca()
-
+gioca() 
