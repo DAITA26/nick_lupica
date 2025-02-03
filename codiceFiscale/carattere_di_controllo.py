@@ -6,7 +6,7 @@ class CarattereDiControllo:
     def __init__(self, codice_fiscale):
         self.codice_fiscale = codice_fiscale.upper()  # Prendiamo il codice fiscale in maiuscolo
 
-    # Valori delle lettere per le posizioni dispari (1, 3, 5, ...)
+    # Valori delle lettere per le posizioni dispari
     def valore_lettera_dispari(self, carattere):
         valori = {
             '0': 1, '9': 21, 'I': 19, 'R': 8,
@@ -21,7 +21,7 @@ class CarattereDiControllo:
         }
         return valori.get(carattere, 0)
 
-    # Valori delle lettere per le posizioni pari (2, 4, 6, ...)
+    # Valori delle lettere per le posizioni pari
     def valore_lettera_pari(self, carattere):
         valori = {
             '0': 0, '9': 9, 'I': 8, 'R': 17,
@@ -36,7 +36,7 @@ class CarattereDiControllo:
         }
         return valori.get(carattere, 0)
 
-    # Calcola il valore da sommare in base al carattere e alla posizione (dispari o pari)
+    # Calcola il valore da sommare in base al carattere e alla posizione
     def calcola_valore(self, carattere, pos):
         if carattere.isalpha() or carattere.isdigit():
             if pos % 2 == 1:  # Posizioni dispari
@@ -48,20 +48,20 @@ class CarattereDiControllo:
     # Calcola il carattere di controllo
     def calcola_carattere_controllo(self):
         somma = 0
-        # Consideriamo solo i primi 15 caratteri per il calcolo del carattere di controllo
+        # Consideriamo solo i primi 15 caratteri
         for i, carattere in enumerate(self.codice_fiscale[:15]):
-            valore = self.calcola_valore(carattere, i + 1)  # Aggiungiamo 1 per il conteggio corretto
+            valore = self.calcola_valore(carattere, i + 1) 
             somma += valore
 
         # Il resto della somma modulo 26
         resto = somma % 26
-        # Mappiamo il resto in una lettera (0 = A, 1 = B, ..., 25 = Z)
-        carattere_controllo = chr(65 + resto)  # 65 è 'A' in ASCII
+       
+        carattere_controllo = chr(65 + resto) 
         return carattere_controllo
 
 # Test del codice
 if __name__ == "__main__":
-    codice_fiscale = "LPCNCL99C04F158"  # Codice fiscale di esempio senza il carattere di controllo
+    codice_fiscale = "LPCNCL99C04F158"  
     calcolo = CarattereDiControllo(codice_fiscale)
     carattere_controllo = calcolo.calcola_carattere_controllo()
     print(f"Il carattere di controllo del codice fiscale è: {carattere_controllo}")
